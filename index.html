@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganpati Stationery</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      /* Purple gradient colors used across the site */
+      --primary: #8E2DE2;
+      /* Primary purple */
+      --secondary: #4A00E0;
+      /* Secondary dark purple */
+      --accent: #2c3e50;
+      /* Dark accent */
+      --text: #333333;
+      /* Dark text */
+      --background: #f7f7f7;
+      /* Light background */
+      --navbar-bg: linear-gradient(90deg, var(--primary), var(--secondary));
+      --slider-bg: #bdc3c7;
+      /* Fallback slider background */
+    }
+
+    /* Universal Box-Sizing & Image Handling */
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: var(--navbar-bg);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container .ganpati-logo {
+      height: 80px;
+      /* Enlarged logo */
+      width: auto;
+      border-radius: 20px;
+    }
+
+    .site-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .site-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin: 0;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      margin: 0;
+      color: #eee;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Hero Slider Styles */
+    .hero-section {
+      position: relative;
+      height: 72vh;
+      overflow: hidden;
+    }
+
+    .hero-slider {
+      height: 100%;
+      display: flex;
+      animation: slide 5s infinite;
+    }
+
+    .hero-slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: var(--slider-bg);
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+
+      45% {
+        transform: translateX(0);
+      }
+
+      55% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Categories Header */
+    .categories-header {
+      text-align: center;
+      padding: 1rem 5% 2rem;
+    }
+
+    .categories-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .categories-header p {
+      font-size: 1.1rem;
+      color: #777777;
+      margin-top: 0.5rem;
+    }
+
+    /* Category Container */
+    .category-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 1rem;
+      padding: 1rem 5%;
+      margin: 0 auto;
+    }
+
+    .category {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .category img {
+      width: 100%;
+      height: 150px;
+      /* Adjusts height dynamically */
+      object-fit: contain;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .category h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      margin: 1rem;
+      color: var(--text);
+      text-align: center;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-content ul {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: var(--text);
+    }
+
+    /* Featured Products Section */
+    .featured-section {
+      padding: 1rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .featured-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .featured-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .featured-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      max-width: 300px;
+      flex: 1;
+    }
+
+    .featured-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .featured-item h3 {
+      font-family: 'Poppins', sans-serif;
+      margin: 1rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    .featured-item p {
+      margin: 0 1rem 1rem;
+      color: #777;
+      font-size: 0.95rem;
+    }
+
+    /* Featured Brands Section */
+    .featured-brands-section {
+      padding: 1rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .featured-brands-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Container for brand boxes */
+    .brands-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Individual brand box styling */
+    .brand-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      flex: 1 1 150px;
+      /* Allows a flexible basis of 150px per box */
+      max-width: 150px;
+      /* Keeps the boxes small for multiple items per row */
+      margin: 0.5rem;
+    }
+
+    .brand-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand-box img {
+      width: 100%;
+      height: 100px;
+      /* Fixed height for consistent display */
+      object-fit: contain;
+      background-color: #f8f8f8;
+    }
+
+    .brand-box h3 {
+      font-family: 'Poppins', sans-serif;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 4rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .testimonials-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .testimonials-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 300px;
+      flex: 1;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .testimonial h4 {
+      font-family: 'Poppins', sans-serif;
+      margin-top: 1rem;
+      color: var(--accent);
+    }
+
+    /* Footer Styles */
+    footer {
+      background: var(--navbar-bg);
+      padding: 2rem 5%;
+      text-align: center;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* New Arrivals Section heading with gradient styling */
+.new-arrivals-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Wrapper to center the container with an animated gradient border */
+.new-arrivals-wrapper {
+  width: 90vw;               /* Adjust width relative to viewport */
+  max-width: 1200px;         /* Optional max-width for larger screens */
+  margin: 0 auto;            /* Center horizontally */
+  padding: 8px;              /* Increased border thickness */
+  border-radius: 20px;       /* Rounded corners for the border */
+  background: linear-gradient(
+    45deg,
+    #FF5F6D,                 /* Bright color stop 1 */
+    #FFC371,                 /* Bright color stop 2 */
+    #47EBD1,                 /* Bright color stop 3 */
+    #845EC2                  /* Bright color stop 4 */
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  cursor: pointer;
+}
+
+/* Inner container that clips the image and applies matching rounded corners */
+.new-arrivals-box {
+  overflow: hidden;
+  border-radius: 17px;       /* Slightly smaller to reveal the border */
+  position: relative;
+}
+
+.new-arrivals-box img {
+  width: 100%;
+  height: 280px;             /* Fixed height */
+  object-fit: cover;         /* Crops image to cover container */
+  display: block;
+}
+
+.new-arrivals-box h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+/* Keyframes for the animated gradient border */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+    /* Party Decoration Essentials Section */
+    .party-decoration-section {
+      padding: 1rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .party-decoration-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Flex layout for cards that wraps and centers each row */
+    .party-decoration-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* Centers items in each row */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* Smaller card styling */
+    .party-category-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      padding: 0.5rem;
+      text-align: center;
+      width: 150px;
+      /* Fixed width to keep cards uniform and compact */
+    }
+
+    .party-category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image styling to ensure the entire image is visible */
+    .party-category-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Card heading styling */
+    .party-category-card h3 {
+      font-family: 'Poppins', sans-serif;
+      margin: 0.5rem 0 0;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+
+
+
+    /* Responsive Styles for Mobiles */
+    @media (max-width: 768px) {
+
+      /* Reduced Navbar */
+      .navbar {
+        padding: 0.5rem 2%;
+      }
+
+      .logo-container .ganpati-logo {
+        height: 50px;
+      }
+
+      .site-name {
+        font-size: 1.5rem;
+      }
+
+      .tagline {
+        font-size: 0.8rem;
+      }
+
+      .nav-links a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        height: 30vh;
+      }
+
+      /* @media (max-width: 768px) { */
+      /* Featured Products: one product per row */
+      .featured-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Category Container: one category per row */
+      .category-container {
+        grid-template-columns: 1fr;
+      }
+
+      /* About Us Section: center align the content */
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* } */
+
+
+      /* Categories Header & Container */
+      .categories-header h2 {
+        font-size: 2rem;
+      }
+
+      .category-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+      }
+
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="./Ganpati Stationery Logo.jpg" alt="Lord Ganpati Logo" class="ganpati-logo">
+      <div class="site-details">
+        <h1 class="site-name">Ganpati Stationery</h1>
+        <p class="tagline">Quality Stationery for Creative Minds</p>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="products.html">All Products</a>
+      <a href="locate.html">Locate Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Slider Section -->
+  <section class="hero-section">
+    <div class="hero-slider">
+      <img
+        src="./DALL·E 2025-02-21 17.30.05 - A group of cute, diverse kids joyfully interacting with colorful stationery items like pencils, crayons, rulers, and notebooks. The scene is bright an.webp"
+        alt="Special Offers">
+      <img
+        src="./DALL·E 2025-02-21 17.30.09 - A vibrant birthday party scene featuring happy children celebrating with balloons, a large birthday cake, and colorful decorations. The kids are smili.webp"
+        alt="New Arrivals">
+      <img
+        src="./DALL·E 2025-02-17 21.17.07 - A charming and joyful scene featuring happy children surrounded by gifts, celebrating together. The image has a soft pinkish color theme, creating a w.jpg"
+        alt="New Arrivals">
+
+    </div>
+  </section>
+
+
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="./Ganpati Stationery Logo.jpg" alt="Ganpati Stationery Logo">
+      </div>
+      <div class="about-content">
+        <h2>About Ganpati Stationery</h2>
+        <p style="text-align: justify;">
+          At Ganpati Stationery, we offer a one-stop shop for all your creative and celebration needs. Discover why our
+          customers love us:
+        </p>
+        <ul style="text-align: justify;">
+          <li><strong>All-in-One Stationery:</strong> Find notebooks, markers, pens, and more for every creative
+            project.</li>
+          <li><strong>Vibrant Party Décor:</strong> Explore decorations for birthdays, anniversaries, baby showers, and
+            all celebrations.</li>
+          <li><strong>Unique Gift Collection:</strong> Choose from a wide variety of keychains, carry bags, toys,
+            spinners, and more.</li>
+          <li><strong>Quality & Innovation:</strong> Enjoy products crafted with precision and passion for design.</li>
+          <li><strong>Customer-Centric Service:</strong> Benefit from exceptional service and affordable prices.</li>
+        </ul>
+        <p>
+          Experience the creativity and quality of Ganpati Stationery today!
+        </p>
+      </div>
+    </div>
+  </section>
+
+   <!-- New Arrivals Section -->
+   <section class="new-arrivals-section">
+    <h2>Introducing Fresh, One-of-a-Kind Products</h2>
+    <div class="new-arrivals-wrapper" onclick="window.location.href='products.html?category=gifts'">
+      <div class="new-arrivals-box">
+        <img src="./DALL·E 2025-02-21 17.41.26 - A modern and artistic 'New Arrivals' banner with a futuristic and abstract design. The background features smooth, flowing gradient shapes in vibrant .webp" alt="New Arrivals">
+        <h3>Click here!</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-section">
+    <h2>Featured Products</h2>
+    <div class="featured-container">
+      <div class="featured-item">
+        <img src="https://m.media-amazon.com/images/I/81yI8ESUgyL._AC_UY1100_.jpg" alt="Stylish Keychain">
+        <h3>Keychains</h3>
+        <p>Trendy and durable keychains to add a touch of style to your essentials.</p>
+      </div>
+      <div class="featured-item">
+        <img src="https://m.media-amazon.com/images/I/71lcGTVfq1L.jpg" alt="Fidget Spinner">
+        <h3>Spinners</h3>
+        <p>Enjoy endless fun and stress relief with our high-quality spinners.</p>
+      </div>
+      <div class="featured-item">
+        <img
+          src="https://www.prettylittlethings.in/cdn/shop/files/rn-image_picker_lib_temp_d866a153-27c7-4474-9d52-9c327a42ecca.jpg?v=1697616696"
+          alt="Trendy Carry Bag">
+        <h3>Carry Bags</h3>
+        <p>Stylish and spacious carry bags, perfect for everyday use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-header">
+    <h2>Categories for You</h2>
+    <p>Discover our curated collection of premium stationery</p>
+  </section>
+  <div class="category-container" id="categoryContainer">
+    <!-- Category cards will be generated here -->
+  </div>
+
+
+  <!-- Party Decoration Essentials Section -->
+  <section class="party-decoration-section">
+    <h2>Party Decoration Essentials</h2>
+    <div class="party-decoration-container" id="partyDecorationContainer">
+      <!-- Party category cards will be generated here -->
+    </div>
+  </section>
+
+
+  <!-- Featured Brands Section -->
+  <section class="featured-brands-section">
+    <h2>Our Trusted Brands</h2>
+    <div class="brands-container">
+      <div class="brand-box">
+        <img src="https://i.pinimg.com/474x/cb/93/01/cb9301f3d44a236d7edbc6aa7fadee84.jpg" alt="Brand 1 Logo">
+        <h3>CLASSMATE</h3>
+        <!-- <p>Quality stationery and more.</p> -->
+      </div>
+      <div class="brand-box">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg05GB4CDVvbQhU6uoRubL96tA43UFBC_O21ndBX80qAKmmFYqQd-tlpyICNCRxJh4TGhAwYP84_AMF8DPc2tdBQDcMpPN6qM1SvTdH15-Cb4v7u5wppOjTFyR9t1GnsDftoO21M4gcKKg/s984/DOMS-Logo.jpg"
+          alt="Brand 2 Logo">
+        <h3>DOMS</h3>
+        <!-- <p>Innovative and reliable products.</p> -->
+      </div>
+      <div class="brand-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRynIP7x-c7jom9wAHX7R29wRTBnmgiQbRwjg&s"
+          alt="Brand 3 Logo">
+        <h3>YOUVA</h3>
+        <!-- <p>Excellence in everyday essentials.</p> -->
+      </div>
+      <div class="brand-box">
+        <img src="https://cdn.worldvectorlogo.com/logos/faber-castell.svg" alt="Brand 3 Logo">
+        <h3>FABER CASTELL</h3>
+      </div>
+      <div class="brand-box">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Camlin_Kokuyo_logo.png" alt="Brand 3 Logo">
+        <h3>CAMLIN</h3>
+      </div>
+      <div class="brand-box">
+        <img src="https://m.media-amazon.com/images/I/41KAWUemRvL._AC_UF1000,1000_QL80_.jpg" alt="Brand 3 Logo">
+        <h3>LOTUS</h3>
+      </div>
+      <div class="brand-box">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Parker_Pen_Company_logo.svg/1200px-Parker_Pen_Company_logo.svg.png"
+          alt="Brand 3 Logo">
+        <h3>PARKER</h3>
+      </div>
+    </div>
+    <p style="font-size: 1.3rem; font-weight: 600; color: #444;font-family: 'Poppins', sans-serif;">
+      While we only feature selected products here, all standard stationery items—like pens, notebooks etc. are
+      available from our trusted brands.
+    </p>
+
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-container">
+      <div class="testimonial">
+        <p>"Ganpati Stationery has transformed my workspace and parties with their exquisite designs. Their range—from
+          premium stationery to unique party decor and thoughtful gifts—is simply unbeatable!"</p>
+        <h4>- Aditi Sharma</h4>
+      </div>
+      <div class="testimonial">
+        <p>"From elegant notebooks and vibrant markers to fun toys, spinners, and stylish carry bags, every product
+          exudes excellence. A must-visit shop for all creative and celebration needs."</p>
+        <h4>- Rajesh Kumar</h4>
+      </div>
+      <div class="testimonial">
+        <p>"The attention to detail in every item, whether it's keychains, birthday decorations, or anniversary gifts,
+          is truly commendable. Ganpati Stationery is my go-to for everything creative!"</p>
+        <h4>- Priya Singh</h4>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ganpati Stationery. All Rights Reserved.</p>
+    <p>
+      Crafted with ❤️ by Gagan
+    </p>
+  </footer>
+
+  <script>
+    // Unified Data Structure
+    const data = {
+      categories: [
+        { name: "Sharpners", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcEdExWGgz1-TpOR2YBU4mBmvGUl0mSqlJbw&s", id: "sharpners" },
+        { name: "Piggy Banks", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk_8820O-DERZn9vsZP_MTjG70kZ63avIoTQ&s", id: "money-bank" },
+        { name: "Colors", image: "https://5.imimg.com/data5/SELLER/Default/2024/2/382541004/NW/EK/BJ/28621840/71jjf2dmcvl-sl1023-500x500.jpg", id: "color" },
+        { name: "Pen", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/pen/8/y/n/10ps-stationery-design-pen-for-kids-unique-design-fancy-writing-original-imaggz5edjhekhfb.jpeg?q=90&crop=false", id: "pen" },
+        { name: "Pencils", image: "https://i0.wp.com/www.returngiftwala.com/wp-content/uploads/2019/09/3f8a0f17e2under-the-sea-theme-pencils.jpg", id: "pencils" },
+        { name: "Erasers", image: "https://m.media-amazon.com/images/I/618kB-BH0lL.jpg", id: "eraser" },
+        { name: "Kits", image: "./product_images/WhatsApp Image 2025-02-18 at 21.38.08_689e86b1.jpg", id: "kits" },
+
+        { name: "Spinners", image: "https://m.media-amazon.com/images/I/71lcGTVfq1L.jpg", id: "spinners" },
+        { name: "Slime/Clay", image: "https://m.media-amazon.com/images/I/71duWO2XKRL.jpg", id: "slime" },
+        { name: "Keychains", image: "https://m.media-amazon.com/images/I/51IOnMMdKTL._AC_UY1100_.jpg", id: "keychains" },
+        { name: "Carry Bags", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwaAKwbu9bHABv05GyIby0BdtLVyjEd-BSg&s", id: "carry_bags" },
+        { name: "Games", image: "https://images.meesho.com/images/products/458250769/h9uq2_512.jpg", id: "games" },
+        { name: "Activity Sets", image: "https://m.media-amazon.com/images/I/712SP1m697L.jpg", id: "activity_sets" },
+        { name: "Folders", image: "https://m.media-amazon.com/images/I/61LaoJohlvL.jpg", id: "folders" },
+        { name: "Diary", image: "https://m.media-amazon.com/images/I/71SoJp7ftPL._AC_UF1000,1000_QL80_.jpg", id: "diary" },
+        { name: "Magnets", image: "https://m.media-amazon.com/images/I/51QzW0SkcJL.jpg", id: "magnets" },
+      ]
+    };
+
+    function loadCategories() {
+      const categoryContainer = document.getElementById('categoryContainer');
+      data.categories.forEach(cat => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'category';
+        catDiv.onclick = () => { window.location.href = `products.html?category=${cat.id}`; };
+        catDiv.innerHTML = `<img src="${cat.image}" alt="${cat.name}"><h3>${cat.name}</h3>`;
+        categoryContainer.appendChild(catDiv);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadCategories);
+  </script>
+  <script>
+    // Party Decoration Essentials Categories Data
+    const partyCategories = [
+      { name: "Balloons", image: "https://juzfun.in/wp-content/uploads/2022/12/Balloon-Set-Violet-1-1.jpg", id: "balloons" },
+      { name: "Curtains", image: "https://images-cdn.ubuy.co.in/6477f601c16b5b4e3115bfc4-lolstar-rainbow-foil-fringe-curtains-2.jpg", id: "curtains" },
+      { name: "Party Poppers", image: "https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/6540bc438c9d03f559392e75/51ygjend9gl.jpg", id: "party_poppers" },
+      { name: "Candles", image: "https://5.imimg.com/data5/SELLER/Default/2024/7/438997870/TV/UW/WS/195687715/birthday-sparkle-candles.jpg", id: "candles" },
+      { name: "Special Balloons", image: "https://www.funcorp.in/cdn/shop/products/image_2021_11_09t08_27_16_783z-removebg-preview.png?v=1675937115", id: "special_balloons" },
+      { name: "Caps", image: "https://rukminim2.flixcart.com/image/850/1000/l12h1u80/hat/e/j/d/fancy-birthday-cap-for-birthday-boy-girl-with-golden-print-pack-original-imagcpqnjzvfctfy.jpeg?q=90&crop=false", id: "Caps" },
+      { name: "Birthday Decoration Essentials", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/o/5/q/masha-theme-birthday-party-decorations-combo-set-for-girls-kids-original-imagtntk96g5t6cm.jpeg?q=20&crop=false", id: "birthday_decoration_essentials" },
+      { name: "Anniversary Decoration Essentials", image: "https://images.meesho.com/images/products/95827977/mq3d1_512.webp", id: "Anniversary_decoration_essentials" },
+      { name: "Baby Shower Decoration Essentials", image: "https://m.media-amazon.com/images/I/71aFwxBec3L._AC_UF1000,1000_QL80_.jpg", id: "baby_shower_decoration_essentials" },
+      { name: "Marriage Decoration Essentials", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/6/j/s/haldi-ceremony-decoration-haldi-bride-to-be-wedding-balloon-original-imagr6pm3y9myzua.jpeg?q=90&crop=false", id: "marriage_decoration_essentials" },
+      { name: "Common Party Essentials", image: "https://s.alicdn.com/@sc04/kf/H79ed13ef77284ff4b15a3c2cba7b2a1ev.jpg_720x720q50.jpg", id: "common_party_essentials" }
+    ];
+
+    // Function to load the party decoration categories
+    function loadPartyCategories() {
+      const container = document.getElementById('partyDecorationContainer');
+      partyCategories.forEach(cat => {
+        const card = document.createElement('div');
+        card.className = 'party-category-card';
+        card.innerHTML = `
+          <img src="${cat.image}" alt="${cat.name}">
+          <h3>${cat.name}</h3>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadPartyCategories);
+  </script>
+
+
+</body>
+
+</html>
