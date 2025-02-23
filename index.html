@@ -401,7 +401,7 @@
     /* New Arrivals Section heading with gradient styling */
 .new-arrivals-section h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -549,11 +549,11 @@
       }
 
       .site-name {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
       }
 
       .tagline {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
       }
 
       .nav-links a {
@@ -658,32 +658,8 @@
     <div class="new-arrivals-wrapper" onclick="window.location.href='products.html?category=gifts'">
       <div class="new-arrivals-box">
         <img src="./DALL·E 2025-02-21 17.41.26 - A modern and artistic 'New Arrivals' banner with a futuristic and abstract design. The background features smooth, flowing gradient shapes in vibrant .webp" alt="New Arrivals">
-        <h3>Click here!</h3>
       </div>
-    </div>
-  </section>
-
-  <!-- Featured Products Section -->
-  <section class="featured-section">
-    <h2>Featured Products</h2>
-    <div class="featured-container">
-      <div class="featured-item">
-        <img src="https://m.media-amazon.com/images/I/81yI8ESUgyL._AC_UY1100_.jpg" alt="Stylish Keychain">
-        <h3>Keychains</h3>
-        <p>Trendy and durable keychains to add a touch of style to your essentials.</p>
-      </div>
-      <div class="featured-item">
-        <img src="https://m.media-amazon.com/images/I/71lcGTVfq1L.jpg" alt="Fidget Spinner">
-        <h3>Spinners</h3>
-        <p>Enjoy endless fun and stress relief with our high-quality spinners.</p>
-      </div>
-      <div class="featured-item">
-        <img
-          src="https://www.prettylittlethings.in/cdn/shop/files/rn-image_picker_lib_temp_d866a153-27c7-4474-9d52-9c327a42ecca.jpg?v=1697616696"
-          alt="Trendy Carry Bag">
-        <h3>Carry Bags</h3>
-        <p>Stylish and spacious carry bags, perfect for everyday use.</p>
-      </div>
+      <h1 style="text-align: center;">CLICK HERE!</h1>
     </div>
   </section>
 
@@ -700,11 +676,35 @@
   <!-- Party Decoration Essentials Section -->
   <section class="party-decoration-section">
     <h2>Party Decoration Essentials</h2>
+    <p style="font-size: 1.3rem; font-weight: 600; color: #444;font-family: 'Poppins', sans-serif;">Below are the available party decoration categories. Contact us for your requirements
+    </p>
     <div class="party-decoration-container" id="partyDecorationContainer">
       <!-- Party category cards will be generated here -->
     </div>
   </section>
-
+ <!-- Featured Products Section -->
+ <section class="featured-section">
+  <h2>Featured Products</h2>
+  <div class="featured-container">
+    <div class="featured-item">
+      <img src="https://m.media-amazon.com/images/I/81yI8ESUgyL._AC_UY1100_.jpg" alt="Stylish Keychain">
+      <h3>Keychains</h3>
+      <p>Trendy and durable keychains to add a touch of style to your essentials.</p>
+    </div>
+    <div class="featured-item">
+      <img src="https://m.media-amazon.com/images/I/71lcGTVfq1L.jpg" alt="Fidget Spinner">
+      <h3>Spinners</h3>
+      <p>Enjoy endless fun and stress relief with our high-quality spinners.</p>
+    </div>
+    <div class="featured-item">
+      <img
+        src="https://www.prettylittlethings.in/cdn/shop/files/rn-image_picker_lib_temp_d866a153-27c7-4474-9d52-9c327a42ecca.jpg?v=1697616696"
+        alt="Trendy Carry Bag">
+      <h3>Carry Bags</h3>
+      <p>Stylish and spacious carry bags, perfect for everyday use.</p>
+    </div>
+  </div>
+</section>
 
   <!-- Featured Brands Section -->
   <section class="featured-brands-section">
@@ -749,7 +749,7 @@
     </div>
     <p style="font-size: 1.3rem; font-weight: 600; color: #444;font-family: 'Poppins', sans-serif;">
       While we only feature selected products here, all standard stationery items—like pens, notebooks etc. are
-      available from our trusted brands.
+      available from our trusted brands. Contact us for your requirements.
     </p>
 
   </section>
@@ -854,6 +854,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadPartyCategories);
+
+    // Show a reminder after 5 seconds
+    setTimeout(() => {
+        alert("Don't forget to scroll down! 🎉");
+    }, 5000);
   </script>
 
 
