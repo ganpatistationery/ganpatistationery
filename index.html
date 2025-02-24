@@ -630,7 +630,7 @@
     <div class="nav-links">
       <a href="aboutus.html">About Us</a>
       <a href="products.html">All Products</a>
-      <a href="locate.html">Locate</a>
+      <a href="locate.html">Locate Us</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -673,15 +673,36 @@
   </div>
 
 
+
+
+
   <!-- Party Decoration Essentials Section -->
-  <section class="party-decoration-section">
-    <h2>Party Decoration Essentials</h2>
-    <p style="font-size: 1.3rem; font-weight: 600; color: #444;font-family: 'Poppins', sans-serif;">Below are the available party decoration categories. Contact us for your requirements
-    </p>
-    <div class="party-decoration-container" id="partyDecorationContainer">
-      <!-- Party category cards will be generated here -->
-    </div>
-  </section>
+<section class="party-decoration-section">
+  <h2>Party Decoration Essentials</h2>
+  <p style="font-size: 1.3rem; font-weight: 600; color: #444; font-family: 'Poppins', sans-serif;">
+    Below are the available party decoration categories. Contact us for your requirements.
+  </p>
+  
+  <!-- Note for users -->
+  <p class="decoration-note" style="font-size: 1.2rem; font-family: 'Poppins', sans-serif; color: #555; margin-top: 10px;">
+    For purchasing party decoration essentials tailored to your theme and desired quantity, please get in touch with us. Click the button below to connect with us on WhatsApp for further details and pricing.
+  </p>
+  
+  <!-- Button to navigate to WhatsApp -->
+  <button class="whatsapp-btn" 
+          style="padding: 10px 20px; margin-top: 15px; background-color: #af47db; color: #fff; border: none; border-radius: 5px; font-size: 1rem;"
+          onclick="contactDecoration()">
+    Contact Us on WhatsApp
+  </button>
+
+  <div class="party-decoration-container" id="partyDecorationContainer">
+    <!-- Party category cards will be generated here -->
+  </div>
+  
+</section>
+
+
+
  <!-- Featured Products Section -->
  <section class="featured-section">
   <h2>Featured Products</h2>
@@ -827,16 +848,17 @@
     // Party Decoration Essentials Categories Data
     const partyCategories = [
       { name: "Balloons", image: "https://juzfun.in/wp-content/uploads/2022/12/Balloon-Set-Violet-1-1.jpg", id: "balloons" },
+      { name: "Chrome Balloons", image: "https://m.media-amazon.com/images/I/81XKu5MKy1L.jpg", id: "chrome_balloons" },
       { name: "Curtains", image: "https://images-cdn.ubuy.co.in/6477f601c16b5b4e3115bfc4-lolstar-rainbow-foil-fringe-curtains-2.jpg", id: "curtains" },
       { name: "Party Poppers", image: "https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/6540bc438c9d03f559392e75/51ygjend9gl.jpg", id: "party_poppers" },
       { name: "Candles", image: "https://5.imimg.com/data5/SELLER/Default/2024/7/438997870/TV/UW/WS/195687715/birthday-sparkle-candles.jpg", id: "candles" },
-      { name: "Special Balloons", image: "https://www.funcorp.in/cdn/shop/products/image_2021_11_09t08_27_16_783z-removebg-preview.png?v=1675937115", id: "special_balloons" },
+      { name: "Cartoon Characters Balloons", image: "https://www.funcorp.in/cdn/shop/products/image_2021_11_09t08_27_16_783z-removebg-preview.png?v=1675937115", id: "special_balloons" },
       { name: "Caps", image: "https://rukminim2.flixcart.com/image/850/1000/l12h1u80/hat/e/j/d/fancy-birthday-cap-for-birthday-boy-girl-with-golden-print-pack-original-imagcpqnjzvfctfy.jpeg?q=90&crop=false", id: "Caps" },
       { name: "Birthday Decoration Essentials", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/o/5/q/masha-theme-birthday-party-decorations-combo-set-for-girls-kids-original-imagtntk96g5t6cm.jpeg?q=20&crop=false", id: "birthday_decoration_essentials" },
       { name: "Anniversary Decoration Essentials", image: "https://images.meesho.com/images/products/95827977/mq3d1_512.webp", id: "Anniversary_decoration_essentials" },
       { name: "Baby Shower Decoration Essentials", image: "https://m.media-amazon.com/images/I/71aFwxBec3L._AC_UF1000,1000_QL80_.jpg", id: "baby_shower_decoration_essentials" },
       { name: "Marriage Decoration Essentials", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/birthday-combo/6/j/s/haldi-ceremony-decoration-haldi-bride-to-be-wedding-balloon-original-imagr6pm3y9myzua.jpeg?q=90&crop=false", id: "marriage_decoration_essentials" },
-      { name: "Common Party Essentials", image: "https://s.alicdn.com/@sc04/kf/H79ed13ef77284ff4b15a3c2cba7b2a1ev.jpg_720x720q50.jpg", id: "common_party_essentials" }
+      { name: "Theme Party Essentials", image: "https://s.alicdn.com/@sc04/kf/H79ed13ef77284ff4b15a3c2cba7b2a1ev.jpg_720x720q50.jpg", id: "common_party_essentials" }
     ];
 
     // Function to load the party decoration categories
@@ -859,6 +881,13 @@
     setTimeout(() => {
         alert("Don't forget to scroll down! 🎉");
     }, 5000);
+
+    function contactDecoration() {
+    const message = "Hello, I am interested in purchasing party decoration essentials tailored to my theme and desired quantity. Please provide me with further details and pricing.";
+    const whatsappNumber = "918307789121"; // Update with your WhatsApp number if needed
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, '_blank');
+  }
   </script>
 
 
