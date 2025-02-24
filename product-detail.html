@@ -324,29 +324,22 @@
     <div class="productData--single">
       <div class="product-title-container">
         <h1 id="productName">Product Name</h1>
-        <!-- <button class="share-product-btn" onclick="shareProduct()"> -->
-          <!-- <span class="share-icon">🔗</span> Share -->
-        <!-- </button> -->
       </div>
       
-      <!-- Price section -->
-      <div class="price-highlight">
-        <div class="final-price">
-          ₹<span id="totalPrice">0</span>
-          <span class="price-label"> Total Price</span>
-        </div>
-      </div>
-      
+      <!-- Quantity controls remain -->
       <div class="quantity-controls">
         <button onclick="decreaseQuantity()">-</button>
         <span id="quantity">1</span>
         <button onclick="increaseQuantity()">+</button>
       </div>
       
+      <!-- Note on price confirmation -->
+      <p class="price-note">
+        Please note: You may confirm the latest price based on your selected quantity when you proceed by contacting us.
+      </p>
+      
       <div class="product-actions">
-        <!-- <button class="cart-btn" onclick="addToCart()">Add to Cart</button> -->
-        <!-- Clicking this button will reveal the booking form -->
-        <button class="book-btn" onclick="showBookingForm()">Contact Dealer</button>
+        <button class="book-btn" onclick="showBookingForm()">Contact us for Purchase </button>
       </div>
     </div>
   </div>
@@ -376,17 +369,10 @@
     const productId = urlParams.get('id');
     const product = productsData.find(p => p.id === productId);
     
-    // Variable to hold the unit price for quantity calculations
-    let computedUnitPrice = 0;
-    
     if (product) {
       // Use product.image since the JSON has a single image property
       document.getElementById('featuredImage').src = product.image;
       document.getElementById('productName').innerText = product.name;
-      
-      // Set the initial price using product.price
-      computedUnitPrice = product.price;
-      document.getElementById('totalPrice').innerText = computedUnitPrice;
       
       // Optional: Create a gallery with the same image if needed
       const gallery = document.getElementById('galleryImages');
@@ -403,7 +389,6 @@
       let qty = parseInt(document.getElementById("quantity").innerText);
       qty++;
       document.getElementById("quantity").innerText = qty;
-      document.getElementById("totalPrice").innerText = qty * computedUnitPrice;
     }
     
     function decreaseQuantity() {
@@ -411,19 +396,10 @@
       if (qty > 1) {
         qty--;
         document.getElementById("quantity").innerText = qty;
-        document.getElementById("totalPrice").innerText = qty * computedUnitPrice;
       }
     }
     
-    function shareProduct() {
-      alert("Product link copied to clipboard!");
-    }
-    
-    function addToCart() {
-      alert("Added to cart!");
-    }
-    
-    // Show the booking form when the user clicks Book Now
+    // Show the booking form when the user clicks Contact Dealer
     function showBookingForm() {
       document.getElementById("bookingForm").style.display = "block";
       document.getElementById("bookingForm").scrollIntoView({ behavior: 'smooth' });
@@ -443,13 +419,11 @@
       // Retrieve product details from the page
       const productName = document.getElementById("productName").innerText;
       const quantity = document.getElementById("quantity").innerText;
-      const totalPrice = document.getElementById("totalPrice").innerText;
       
       // Construct the WhatsApp message using URL-encoded line breaks (%0A)
       let message = `Hello, I would like to place an order.%0A`;
       message += `Product: ${productName}%0A`;
-      message += `Quantity: ${quantity}%0A`;
-      message += `Total Price: ₹${totalPrice}%0A%0A`;
+      message += `Quantity: ${quantity}%0A%0A`;
       message += `Customer Details:%0A`;
       message += `Name: ${customerName}%0A`;
       message += `Address: ${customerAddress}%0A`;
@@ -464,4 +438,5 @@
     }
   </script>
 </body>
+
 </html>
