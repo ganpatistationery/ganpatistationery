@@ -1,6 +1,108 @@
 // unifiedProducts.js
 const productsData = [
   {
+    "id": "p324",
+    "name": "POKEMON CARDS",
+    "image": "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/70/991289/1.jpg?0207",
+    "category": "gifts",
+    "price": 150
+  },
+  {
+    "id": "p325",
+    "name": "NARUTO CARDS",
+    "image": "https://m.media-amazon.com/images/I/81iWmNuAPaL.jpg",
+    "category": "gifts",
+    "price": 10
+  },
+  
+  {
+    "id": "p326",
+    "name": "SMALL POKEMON CARDS",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcp64Ki2vmPlL-RpreHS8JXn4Gr_IDWUAhzg&s",
+    "category": "gifts",
+    "price": 10
+  },
+  {
+    "id": "p327",
+    "name": "UNICORN BANDS",
+    "image": "https://m.media-amazon.com/images/I/71x2zlLxgvL.jpg",
+    "category": "gifts",
+    "price": 50
+  },
+  {
+    "id": "p328",
+    "name": "FRIDGE MAGNET",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGVpTk1OQI83pDfHJdO91QOmwiAR1wos3lWw&s",
+    "category": "gifts",
+    "price": 80
+  },
+  {
+    "id": "p329",
+    "name": "STICKERS",
+    "image": "https://www.fomostore.in/cdn/shop/files/Brothers-Innovation-Sticker_Packs-Pack_of_20-20_Travel_Stickers_in_Pack_1-Image-1_1e6647a1-946e-4f87-86e3-a0db3a6bc60a.jpg?v=1719587379&width=2048",
+    "category": "gifts",
+    "price": 3
+  },
+  {
+    "id": "p330",
+    "name": "WHITE PENCIL SET",
+    "image": "https://m.media-amazon.com/images/I/515oS8RZRKS.jpg",
+    "category": "gifts",
+    "price": 40
+  },
+  {
+    "id": "p331",
+    "name": "DESIGNER STICK NOTES",
+    "image": "https://m.media-amazon.com/images/I/51ZTYVQNIUL.jpg",
+    "category": "gifts",
+    "price": 30
+  },
+  {
+    "id": "p332",
+    "name": "CARTOON PACKING PAPERS",
+    "image": "https://images-cdn.ubuy.co.in/633ffc394cca9407567aee5d-birthday-wrapping-paper-for-boys-girls.jpg",
+    "category": "gifts",
+    "price": 10
+  },
+  {
+    "id": "p333",
+    "name": "COLORFULL ICE CREAM STICKS",
+    "image": "https://m.media-amazon.com/images/I/718FGHcFz7L.jpg",
+    "category": "gifts",
+    "price": 40
+  },{
+    "id": "p334",
+    "name": "STONES",
+    "image": "https://m.media-amazon.com/images/I/81JfiKPCHWL._AC_UF894,1000_QL80_.jpg",
+    "category": "gifts",
+    "price": 20
+  },{
+    "id": "p335",
+    "name": "PHOTO FRAME SET",
+    "image": "https://rukminim1.flixcart.com/image/400/400/jbfe7ww0-1/normal-photo-frame/u/p/q/photo-wall-pictures-collage-hanging-string-bedroom-with-glow-original-imafysc9ysgehypt.jpeg?q=90",
+    "category": "gifts",
+    "price": 250
+  },{
+    "id": "p336",
+    "name": "PREMIUM TAPE SET",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxvG9dXK8sDtMRBt0H9_RkqWPbwqleU12ag&s",
+    "category": "gifts",
+    "price": 20
+  },
+  {
+    "id": "p337",
+    "name": "DOMS ALL IN ONE KIT",
+    "image": "https://images.meesho.com/images/products/438180397/fdhm8_512.webp",
+    "category": "gifts",
+    "price": 350
+  },{
+    "id": "p338",
+    "name": "DOMS UNICORN THEME KIT",
+    "image": "https://m.media-amazon.com/images/I/71Ny5mBjALL._AC_UF350,350_QL80_.jpg",
+    "category": "gifts",
+    "price": 150
+  },
+  {
     "id": "p1",
     "name": "CLUTCH ERASER",
     "image": "./product_images/WhatsApp Image 2025-02-18 at 21.29.58_0435068c.jpg",
@@ -36,13 +138,6 @@ const productsData = [
     "price": 150
   },
   {
-    "id": "p10",
-    "name": "STAMPS",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.00_f40a17e6.jpg",
-    "category": "gifts",
-    "price": 50
-  },
-  {
     "id": "p19",
     "name": "BAGS",
     "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.04_996b83bd.jpg",
@@ -70,13 +165,13 @@ const productsData = [
     "category": "kits",
     "price": 200
   },
-  {
-    "id": "p23",
-    "name": "GIFTING COMBO",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.07_41ba978a.jpg",
-    "category": "gifts",
-    "price": 30
-  },
+  // {
+  //   "id": "p23",
+  //   "name": "GIFTING COMBO",
+  //   "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.07_41ba978a.jpg",
+  //   "category": "gifts",
+  //   "price": 30
+  // },
   {
     "id": "p24",
     "name": "AVENGERS KIT",
@@ -189,13 +284,13 @@ const productsData = [
     "category": "kits",
     "price": 150
   },
-  {
-    "id": "p66",
-    "name": "WATER BOTTLE",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.38_0253e212.jpg",
-    "category": "gifts",
-    "price": 150
-  },
+  // {
+  //   "id": "p66",
+  //   "name": "WATER BOTTLE",
+  //   "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.38_0253e212.jpg",
+  //   "category": "gifts",
+  //   "price": 150
+  // },
   {
     "id": "p67",
     "name": "FOLDER WITH SECTIONS",
@@ -223,20 +318,6 @@ const productsData = [
     "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.41_40bcc885.jpg",
     "category": "pencils",
     "price": 120
-  },
-  {
-    "id": "p73",
-    "name": "SPIDER MAN PENCIL BOX",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.41_9966b069.jpg",
-    "category": "gifts",
-    "price": 200
-  },
-  {
-    "id": "p74",
-    "name": "STAMPS",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.30.42_34395f1d.jpg",
-    "category": "gifts",
-    "price": 50
   },
   {
     "id": "p78",
@@ -315,13 +396,13 @@ const productsData = [
     "category": "carry_bags",
     "price": 30
   },
-  {
-    "id": "p96",
-    "name": "KITS",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.28_9eac073a.jpg",
-    "category": "gifts",
-    "price": 250
-  },
+  // {
+  //   "id": "p96",
+  //   "name": "KITS",
+  //   "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.28_9eac073a.jpg",
+  //   "category": "gifts",
+  //   "price": 250
+  // },
   {
     "id": "p97",
     "name": "PENCIL BOX WITH WHITE BOARD",
@@ -329,13 +410,13 @@ const productsData = [
     "category": "kits",
     "price": 250
   },
-  {
-    "id": "p100",
-    "name": "GIFTING COMBO",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.29_9b0d5f86.jpg",
-    "category": "gifts",
-    "price": 100
-  },
+  // {
+  //   "id": "p100",
+  //   "name": "GIFTING COMBO",
+  //   "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.29_9b0d5f86.jpg",
+  //   "category": "gifts",
+  //   "price": 100
+  // },
   {
     "id": "p102",
     "name": "60 SHADES DOUBLE SIDED BRUSH PENS",
@@ -343,13 +424,13 @@ const productsData = [
     "category": "color",
     "price": 550
   },
-  {
-    "id": "p103",
-    "name": "UNICORN POUCHES FOR GIRLS",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.30_9172668c.jpg",
-    "category": "gifts",
-    "price": 150
-  },
+  // {
+  //   "id": "p103",
+  //   "name": "UNICORN POUCHES FOR GIRLS",
+  //   "image": "./product_images/WhatsApp Image 2025-02-18 at 21.34.30_9172668c.jpg",
+  //   "category": "gifts",
+  //   "price": 150
+  // },
   {
     "id": "p107",
     "name": "AVENGERS BANDS",
@@ -820,13 +901,6 @@ const productsData = [
     "price": 150
   },
   {
-    "id": "p283",
-    "name": "STAMPS",
-    "image": "./product_images/WhatsApp Image 2025-02-18 at 21.38.33_ba917ba1.jpg",
-    "category": "gifts",
-    "price": 50
-  },
-  {
     "id": "p286",
     "name": "SOAP",
     "image": "./product_images/WhatsApp Image 2025-02-18 at 21.38.34_c62f7ef0.jpg",
@@ -907,13 +981,13 @@ const productsData = [
     "price": 50
   }
   ,
-  {
-    "id": "p312",
-    "name": "DESIGNER CLIPS",
-    "image": "https://nestasia.in/cdn/shop/products/PictureHangingClipspack.png?v=1603185840&width=600",
-    "category": "gifts",
-    "price": 70
-  }
+  // {
+  //   "id": "p312",
+  //   "name": "DESIGNER CLIPS",
+  //   "image": "https://nestasia.in/cdn/shop/products/PictureHangingClipspack.png?v=1603185840&width=600",
+  //   "category": "gifts",
+  //   "price": 70
+  // }
   ,
   {
     "id": "p313",
