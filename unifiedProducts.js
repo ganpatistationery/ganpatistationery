@@ -1,6 +1,62 @@
 // unifiedProducts.js
 const productsData = [
   {
+    "id": "p339",
+    "name": "CELLO CARTOON PRINT WATER BOTTLES",
+    "image": "https://m.media-amazon.com/images/I/41FzsSVgpEL._SX300_SY300_QL70_FMwebp_.jpg",
+    "category": "gifts",
+    "price": 400
+  },
+  {
+    "id": "p340",
+    "name": "PREMIUM NOTEBOOK COVER",
+    "image": "https://solo.in/cdn/shop/files/01.png?crop=center&height=2186&v=1740208827&width=2186",
+    "category": "gifts",
+    "price": 10
+  },
+  {
+    "id": "p341",
+    "name": "DESIGNER RULER",
+    "image": "https://90smittaikadai.com/wp-content/uploads/2023/03/Add-a-little-bit-of-body-text-11-300x300.webp",
+    "category": "gifts",
+    "price": 30
+  },
+  {
+    "id": "p342",
+    "name": "FLASH CARDS",
+    "image": "https://www.jiomart.com/images/product/original/rv7u0qdvu2/little-berry-alphabets-big-flash-cards-for-kids-32-picture-cards-learning-education-toy-product-images-orv7u0qdvu2-p597422450-0-202301091519.jpg?im=Resize=(1000,1000)",
+    "category": "gifts",
+    "price": 200
+  },
+  {
+    "id": "p343",
+    "name": "GLUE TAPE",
+    "image": "https://www.pentel.co.in/cdn/shop/files/GlueTapeERTP126Open.jpg?v=1724836800",
+    "category": "gifts",
+    "price": 150
+  },
+  {
+    "id": "p344",
+    "name": "CORRECTION TAPE",
+    "image": "https://m.media-amazon.com/images/I/6149SC-V9qL._AC_UF1000,1000_QL80_.jpg",
+    "category": "gifts",
+    "price": 150
+  },
+  {
+    "id": "p345",
+    "name": "YOUVA REGISTERS",
+    "image": "https://m.media-amazon.com/images/I/61eNnFkWJAL.jpg",
+    "category": "gifts",
+    "price": 150
+  },
+  {
+    "id": "p346",
+    "name": "YOUYA NOTEBOOKS",
+    "image": "https://www.kukustoys.com/wp-content/uploads/2024/05/js.jpg",
+    "category": "gifts",
+    "price": 150
+  },
+  {
     "id": "p324",
     "name": "POKEMON CARDS",
     "image": "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/70/991289/1.jpg?0207",
