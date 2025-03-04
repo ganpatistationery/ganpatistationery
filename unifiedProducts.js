@@ -1044,7 +1044,6 @@ const productsData = [
   //   "category": "gifts",
   //   "price": 70
   // }
-  ,
   {
     "id": "p313",
     "name": "TETRA TOWER",
